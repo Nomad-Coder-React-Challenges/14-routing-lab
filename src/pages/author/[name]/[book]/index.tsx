@@ -1,6 +1,6 @@
-import { useParams, Outlet } from "react-router-dom";
-import NavMenu from "#components/common/NavMenu";
-import { CHAPTER_CHARACTER_MENU } from "#src/constants";
+import { useParams, Outlet } from 'react-router-dom';
+import NavMenu from '../../../../components/common/NavMenu';
+import { CHAPTER_CHARACTER_MENU } from '../../../../../src/constants';
 
 const BookPage = () => {
   const params = useParams();
@@ -8,7 +8,7 @@ const BookPage = () => {
 
   return (
     <div>
-      <h2>{currentBook?.split("_")?.join(" ")}</h2>
+      <h2>{currentBook?.split('_')?.join(' ')}</h2>
       <NavMenu menu={CHAPTER_CHARACTER_MENU} />
       <Outlet />
     </div>

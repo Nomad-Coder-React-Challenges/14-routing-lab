@@ -1,6 +1,6 @@
-import { useParams, Outlet } from "react-router-dom";
-import NavMenu from "#components/common/NavMenu";
-import { ROWLING_MENU, TOLKIEN_MENU } from "#src/constants";
+import { useParams, Outlet } from 'react-router-dom';
+import NavMenu from '../../../components/common/NavMenu';
+import { ROWLING_MENU, TOLKIEN_MENU } from '../../../../src/constants';
 
 const NamePage = () => {
   const params = useParams();
@@ -10,7 +10,7 @@ const NamePage = () => {
     <div>
       <h1>{currentPath}</h1>
       <NavMenu
-        menu={currentPath === "J.K.Rowling" ? ROWLING_MENU : TOLKIEN_MENU}
+        menu={currentPath === 'J.K.Rowling' ? ROWLING_MENU : TOLKIEN_MENU}
       />
       <Outlet />
     </div>
